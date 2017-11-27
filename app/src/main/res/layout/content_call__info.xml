@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_call__info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.adity.whatsup.Call_Info"
+    tools:showIn="@layout/activity_call__info">
+
+    <TextView
+        android:text="Call Info"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#b23a01"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:text="Missed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listText"
+        android:layout_toRightOf="@+id/listIcon"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="6dp"
+        android:id="@+id/des"
+        android:textColor="#029ece"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_call_black"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/imageView3"
+        android:onClick="cCall"
+        android:layout_alignBottom="@+id/des" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/listIcon"
+        android:padding="5dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/a"
+        android:layout_below="@+id/textView3"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/listText"
+        android:layout_gravity="top"
+        android:padding="5dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Contact Name"
+        android:textSize="20sp"
+        android:textColor="#003791"
+        android:layout_below="@+id/textView3"
+        android:layout_toRightOf="@+id/listIcon"
+        android:layout_toEndOf="@+id/listIcon" />
+
+</RelativeLayout>

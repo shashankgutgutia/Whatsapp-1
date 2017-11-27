@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.adity.whatsup.Settings"
+    tools:showIn="@layout/activity_settings">
+
+
+    <TextView
+        android:text="My Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#06717c"
+        android:id="@+id/mprof"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#5555"
+        android:layout_below="@id/mprof"
+        android:id="@+id/linediv" />
+
+    <TextView
+        android:text="Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="11dp"
+        android:textSize="22sp"
+        android:textColor="#06717c"
+        android:id="@+id/stat"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profbtn"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#5555"
+        android:layout_below="@id/stat"
+        android:id="@+id/linediv2" />
+
+    <TextView
+        android:text="Hi there...I'm using Whatsup!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/status"
+        android:textSize="18sp"
+        android:textColor="#58667c"
+        android:layout_below="@+id/stat"
+        android:layout_toLeftOf="@+id/statButton"
+        android:layout_toStartOf="@+id/statButton"
+        android:layout_alignBottom="@+id/statButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        android:id="@+id/statButton"
+        android:layout_below="@+id/linediv2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName|textAutoCorrect"
+        android:hint="Type your status"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Choose Status"
+        android:textSize="20sp"
+        android:paddingTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/choose"
+        android:textColor="#06717c"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#5555"
+        android:layout_below="@id/choose"
+        android:id="@+id/linediv3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linediv3"
+        android:layout_above="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/st1"
+                android:text="Busy"
+                android:onClick="sCall"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <View
+                android:layout_width="270dp"
+                android:layout_gravity="center"
+                android:layout_height="1dp"
+                android:background="#5555"
+                android:id="@+id/line10" />
+
+            <TextView
+                android:padding="5dp"
+                android:text="Available"
+                android:id="@+id/st2"
+                android:onClick="sCall"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <View
+                android:layout_width="270dp"
+                android:layout_gravity="center"
+                android:layout_height="1dp"
+                android:background="#5555"
+                android:id="@+id/line11" />
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/st3"
+                android:text="At the movie"
+                android:textSize="18sp"
+                android:onClick="sCall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <View
+                android:layout_width="270dp"
+                android:layout_gravity="center"
+                android:layout_height="1dp"
+                android:background="#5555"
+                android:id="@+id/line12" />
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/st4"
+                android:text="Studying for exams"
+                android:textSize="18sp"
+                android:onClick="sCall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <View
+                android:layout_width="270dp"
+                android:layout_gravity="center"
+                android:layout_height="1dp"
+                android:background="#5555"
+                android:id="@+id/line14" />
+
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/st5"
+                android:text="Partying"
+                android:textSize="18sp"
+                android:onClick="sCall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <View
+                android:layout_width="270dp"
+                android:layout_gravity="center"
+                android:layout_height="1dp"
+                android:background="#5555"
+                android:id="@+id/line15" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/a"
+        android:id="@+id/profpic"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/linediv"
+        android:layout_alignRight="@+id/mprof"
+        android:layout_alignEnd="@+id/mprof" />
+
+    <Button
+        android:text="Change Your DP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profbtn"
+        android:onClick="cPhoto"
+        android:layout_alignBottom="@+id/profpic"
+        android:layout_toRightOf="@+id/profpic"
+        android:layout_toEndOf="@+id/profpic"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="40dp" />
+
+</RelativeLayout>
